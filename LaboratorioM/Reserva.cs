@@ -35,6 +35,7 @@ namespace LaboratorioM
 
         public decimal Total => BaseImponible + Itbis + Servicio;
 
+        //
 
     }
 }
