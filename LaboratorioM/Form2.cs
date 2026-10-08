@@ -330,5 +330,33 @@ namespace LaboratorioM
             lstResultados.Items.Add($"Excursión 4 × 50: {SistemaViejo.TotalExcursion(4, 50m):N2} (debe dar 180.00)");
             lstResultados.Items.Add($"Minibar 3 × 4: {SistemaViejo.TotalMinibar(3, 4m):N2} (debe dar 14.16)");
         }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            decimal tarifa = nudTarifa.Value;
+            if (chkFinSemana.Checked)
+            {
+                tarifa = tarifa * 1.15m;
+            }
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = tarifa
+            };
+            var traslado = new TrasladoAeropuerto { Pasajeros = 3, Nocturno = true };
+            var excursion = new Excursion { Personas = 5, PrecioPorPersona = 80m };
+            var minibar = new ConsumoMinibar { Cantidad = 9, PrecioUnitario = 3.50m };
+
+            decimal total = reserva.Total + traslado.Total + excursion.Total + minibar.Total;
+
+            lstResultados.Items.Add($"Reserva: {reserva.Total:N2}");
+            lstResultados.Items.Add($"Traslado: {traslado.Total:N2}");
+            lstResultados.Items.Add($"Excursión: {excursion.Total:N2}");
+            lstResultados.Items.Add($"Minibar: {minibar.Total:N2}");
+            lstResultados.Items.Add($"Total US$: {total:N2}");
+            lstResultados.Items.Add($"Total RD$: {total * nudTasa.Value:N2}");
+            lstResultados.Items.Add($"Depósito: {SistemaViejo.CalcularDeposito(total):N2}");
+        }
     }
 }

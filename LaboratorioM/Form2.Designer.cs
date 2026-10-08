@@ -500,6 +500,7 @@
             btnFactura.TabIndex = 41;
             btnFactura.Text = "Factura";
             btnFactura.UseVisualStyleBackColor = true;
+            btnFactura.Click += btnFactura_Click;
             // 
             // frmInicio
             // 
