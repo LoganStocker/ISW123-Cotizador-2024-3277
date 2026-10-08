@@ -121,5 +121,54 @@ namespace LaboratorioM
             MessageBox.Show("Cotización copiada. Ya puedes pegarla en WhatsApp.", "Listo",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnNivel1_Click(object sender, EventArgs e)
+        {
+            int a = 10;
+            int b = 3;
+            int r = a / b;
+
+            decimal r2 = 10 / 4m;
+
+            int x = 5;
+            x = x + 2;
+            x = x * 3;
+
+            decimal p = 200m;
+            decimal r3 = p * 0.18m;
+
+            int n = 7;
+            decimal d = 0m;
+            if (n > 7)
+            {
+                d = 50m;
+            }
+
+            int n2 = 7;
+            bool larga = n2 >= 7;
+
+            string s = "Villa" + "Coral";
+
+            int n3 = 4;
+            decimal t = 100m;
+            decimal total = n3 * t * 1.28m;
+
+            decimal t2 = 120m;
+            t2 = t2 + t2 * 0.25m;
+
+            int noches = (int)8.9m;
+
+            MessageBox.Show(
+            $"r = {r}\n" +
+            $"r2 = {r2}\n" +
+            $"x = {x}\n" +
+            $"r3 = {r3}\n" +
+            $"d = {d}\n" +
+            $"larga = {larga}\n" +
+            $"s = {s}\n" +
+            $"total = {total}\n" +
+            $"t2 = {t2}\n" +
+            $"noches = {noches}");
+        }
     }
 }

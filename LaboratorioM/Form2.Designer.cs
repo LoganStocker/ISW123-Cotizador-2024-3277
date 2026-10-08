@@ -52,6 +52,7 @@
             btncopiar = new Button();
             lstResultados = new ListBox();
             btnimperativo = new Button();
+            btnNivel1 = new Button();
             gpCotizador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbTotales.SuspendLayout();
@@ -292,11 +293,22 @@
             btnimperativo.UseVisualStyleBackColor = true;
             btnimperativo.Click += btnimperativo_Click;
             // 
+            // btnNivel1
+            // 
+            btnNivel1.Location = new Point(41, 583);
+            btnNivel1.Name = "btnNivel1";
+            btnNivel1.Size = new Size(94, 29);
+            btnNivel1.TabIndex = 22;
+            btnNivel1.Text = "NIVEL1";
+            btnNivel1.UseVisualStyleBackColor = true;
+            btnNivel1.Click += btnNivel1_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(929, 553);
+            ClientSize = new Size(929, 684);
+            Controls.Add(btnNivel1);
             Controls.Add(btnimperativo);
             Controls.Add(lstResultados);
             Controls.Add(btncopiar);
@@ -345,5 +357,6 @@
         private Button btncopiar;
         private ListBox lstResultados;
         private Button btnimperativo;
+        private Button btnNivel1;
     }
 }
