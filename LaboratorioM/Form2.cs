@@ -257,5 +257,69 @@ namespace LaboratorioM
             lstResultados.Items.Add($"Servicio: US$ {reserva.Servicio:N2}");
             lstResultados.Items.Add($"Total: US$ {reserva.Total:N2}");
         }
+
+        private void btnTrasladoA_Click(object sender, EventArgs e)
+        {
+            var traslado = new TrasladoAeropuerto
+            {
+                Pasajeros = 3,
+                Nocturno = true
+            };
+
+            lstResultados.Items.Add($"Total traslado: US$ {traslado.Total:N2}");
+        }
+
+        private void btnExcursion_Click(object sender, EventArgs e)
+        {
+            var excursion = new Excursion
+            {
+                Personas = 5,
+                PrecioPorPersona = 80m
+            };
+
+            lstResultados.Items.Add($"Total excursión: US$ {excursion.Total:N2}");
+        }
+
+        private void btnConsumoMinibar_Click(object sender, EventArgs e)
+        {
+            var minibar = new ConsumoMinibar
+            {
+                Cantidad = 9,
+                PrecioUnitario = 3.50m
+            };
+
+            lstResultados.Items.Add($"Total minibar: US$ {minibar.Total:N2}");
+        }
+
+        private void btnCuentaTotal_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+
+            var traslado = new TrasladoAeropuerto
+            {
+                Pasajeros = 3,
+                Nocturno = true
+            };
+
+            var excursion = new Excursion
+            {
+                Personas = 5,
+                PrecioPorPersona = 80m
+            };
+
+            var minibar = new ConsumoMinibar
+            {
+                Cantidad = 9,
+                PrecioUnitario = 3.50m
+            };
+
+            decimal cuentaTotal = reserva.Total + traslado.Total + excursion.Total + minibar.Total;
+            lstResultados.Items.Add($"Cuenta total: US$ {cuentaTotal:N2}");
+        }
     }
 }

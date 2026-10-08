@@ -63,9 +63,12 @@
             label2 = new Label();
             btnDeposito = new Button();
             chkFinSemana = new CheckBox();
-            button1 = new Button();
             btnFinSemana = new Button();
             btnDesglose = new Button();
+            btnTrasladoA = new Button();
+            btnExcursion = new Button();
+            btnConsumoMinibar = new Button();
+            btnCuentaTotal = new Button();
             gpCotizador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudTarifa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
@@ -416,15 +419,6 @@
             chkFinSemana.Text = "Fin de semana (+15%)";
             chkFinSemana.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 33;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // btnFinSemana
             // 
             btnFinSemana.Location = new Point(489, 323);
@@ -446,14 +440,57 @@
             btnDesglose.UseVisualStyleBackColor = true;
             btnDesglose.Click += btnDesglose_Click;
             // 
+            // btnTrasladoA
+            // 
+            btnTrasladoA.Location = new Point(487, 399);
+            btnTrasladoA.Name = "btnTrasladoA";
+            btnTrasladoA.Size = new Size(168, 29);
+            btnTrasladoA.TabIndex = 36;
+            btnTrasladoA.Text = "TrasladoAeropuerto";
+            btnTrasladoA.UseVisualStyleBackColor = true;
+            btnTrasladoA.Click += btnTrasladoA_Click;
+            // 
+            // btnExcursion
+            // 
+            btnExcursion.Location = new Point(487, 434);
+            btnExcursion.Name = "btnExcursion";
+            btnExcursion.Size = new Size(94, 29);
+            btnExcursion.TabIndex = 37;
+            btnExcursion.Text = "Excursion";
+            btnExcursion.UseVisualStyleBackColor = true;
+            btnExcursion.Click += btnExcursion_Click;
+            // 
+            // btnConsumoMinibar
+            // 
+            btnConsumoMinibar.Location = new Point(487, 469);
+            btnConsumoMinibar.Name = "btnConsumoMinibar";
+            btnConsumoMinibar.Size = new Size(135, 29);
+            btnConsumoMinibar.TabIndex = 38;
+            btnConsumoMinibar.Text = "ConsumoMinibar";
+            btnConsumoMinibar.UseVisualStyleBackColor = true;
+            btnConsumoMinibar.Click += btnConsumoMinibar_Click;
+            // 
+            // btnCuentaTotal
+            // 
+            btnCuentaTotal.Location = new Point(487, 504);
+            btnCuentaTotal.Name = "btnCuentaTotal";
+            btnCuentaTotal.Size = new Size(113, 29);
+            btnCuentaTotal.TabIndex = 39;
+            btnCuentaTotal.Text = "CuentaTotal";
+            btnCuentaTotal.UseVisualStyleBackColor = true;
+            btnCuentaTotal.Click += btnCuentaTotal_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1252, 763);
+            Controls.Add(btnCuentaTotal);
+            Controls.Add(btnConsumoMinibar);
+            Controls.Add(btnExcursion);
+            Controls.Add(btnTrasladoA);
             Controls.Add(btnDesglose);
             Controls.Add(btnFinSemana);
-            Controls.Add(button1);
             Controls.Add(chkFinSemana);
             Controls.Add(btnDeposito);
             Controls.Add(label2);
@@ -527,8 +564,11 @@
         private Label label2;
         private Button btnDeposito;
         private CheckBox chkFinSemana;
-        private Button button1;
         private Button btnFinSemana;
         private Button btnDesglose;
+        private Button btnTrasladoA;
+        private Button btnExcursion;
+        private Button btnConsumoMinibar;
+        private Button btnCuentaTotal;
     }
 }
