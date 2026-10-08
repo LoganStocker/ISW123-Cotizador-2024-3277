@@ -170,5 +170,92 @@ namespace LaboratorioM
             $"t2 = {t2}\n" +
             $"noches = {noches}");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+        }
+
+        private void btnPesos_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+
+            decimal tasa = nudTasa.Value;
+            decimal pesos = reserva.Total * tasa;
+            lstResultados.Items.Add($"Total en pesos: RD$ {pesos:N2}");
+        }
+
+        private void btnPorPersona_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+
+            decimal porPersona = reserva.Total / nudPersonas.Value;
+            lstResultados.Items.Add($"Cada persona paga: US$ {porPersona:N2}");
+        }
+
+        private void btnDeposito_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+
+            decimal deposito = reserva.Total * 0.30m;
+            decimal saldo = reserva.Total - deposito;
+
+            lstResultados.Items.Add($"Depósito (30%): US$ {deposito:N2}");
+            lstResultados.Items.Add($"Saldo pendiente: US$ {saldo:N2}");
+        }
+
+        private void btnFinSemana_Click(object sender, EventArgs e)
+        {
+            decimal tarifa = nudTarifa.Value;
+            if (chkFinSemana.Checked)
+            {
+                tarifa = tarifa * 1.15m;
+            }
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = tarifa
+            };
+
+            lstResultados.Items.Add($"Total: US$ {reserva.Total:N2}");
+        }
+
+        private void btnDesglose_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+
+            lstResultados.Items.Add($"Subtotal: US$ {reserva.Subtotal:N2}");
+            lstResultados.Items.Add($"Descuento: US$ {reserva.Descuento:N2}");
+            lstResultados.Items.Add($"Base imponible: US$ {reserva.BaseImponible:N2}");
+            lstResultados.Items.Add($"ITBIS: US$ {reserva.Itbis:N2}");
+            lstResultados.Items.Add($"Servicio: US$ {reserva.Servicio:N2}");
+            lstResultados.Items.Add($"Total: US$ {reserva.Total:N2}");
+        }
     }
 }

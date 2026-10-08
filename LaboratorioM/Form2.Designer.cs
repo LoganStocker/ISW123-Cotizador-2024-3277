@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             gpCotizador = new GroupBox();
+            nudTarifa = new NumericUpDown();
             chkTemporadaAlta = new CheckBox();
             txtTarifa = new TextBox();
             lblTarifaPorNoche = new Label();
@@ -53,13 +54,29 @@
             lstResultados = new ListBox();
             btnimperativo = new Button();
             btnNivel1 = new Button();
+            btnNivel2 = new Button();
+            nudTasa = new NumericUpDown();
+            label1 = new Label();
+            btnPesos = new Button();
+            nudPersonas = new NumericUpDown();
+            btnPorPersona = new Button();
+            label2 = new Label();
+            btnDeposito = new Button();
+            chkFinSemana = new CheckBox();
+            button1 = new Button();
+            btnFinSemana = new Button();
+            btnDesglose = new Button();
             gpCotizador.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudTarifa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbTotales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudTasa).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudPersonas).BeginInit();
             SuspendLayout();
             // 
             // gpCotizador
             // 
+            gpCotizador.Controls.Add(nudTarifa);
             gpCotizador.Controls.Add(chkTemporadaAlta);
             gpCotizador.Controls.Add(txtTarifa);
             gpCotizador.Controls.Add(lblTarifaPorNoche);
@@ -74,6 +91,15 @@
             gpCotizador.TabStop = false;
             gpCotizador.Text = "Cotizador";
             gpCotizador.Enter += gpCotizador_Enter;
+            // 
+            // nudTarifa
+            // 
+            nudTarifa.DecimalPlaces = 2;
+            nudTarifa.Location = new Point(159, 178);
+            nudTarifa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            nudTarifa.Name = "nudTarifa";
+            nudTarifa.Size = new Size(150, 27);
+            nudTarifa.TabIndex = 16;
             // 
             // chkTemporadaAlta
             // 
@@ -278,14 +304,14 @@
             // lstResultados
             // 
             lstResultados.FormattingEnabled = true;
-            lstResultados.Location = new Point(477, 16);
+            lstResultados.Location = new Point(800, 12);
             lstResultados.Name = "lstResultados";
             lstResultados.Size = new Size(440, 464);
             lstResultados.TabIndex = 20;
             // 
             // btnimperativo
             // 
-            btnimperativo.Location = new Point(646, 497);
+            btnimperativo.Location = new Point(800, 492);
             btnimperativo.Name = "btnimperativo";
             btnimperativo.Size = new Size(94, 29);
             btnimperativo.TabIndex = 21;
@@ -303,11 +329,140 @@
             btnNivel1.UseVisualStyleBackColor = true;
             btnNivel1.Click += btnNivel1_Click;
             // 
+            // btnNivel2
+            // 
+            btnNivel2.Location = new Point(141, 583);
+            btnNivel2.Name = "btnNivel2";
+            btnNivel2.Size = new Size(94, 29);
+            btnNivel2.TabIndex = 23;
+            btnNivel2.Text = "NIVEL 2";
+            btnNivel2.UseVisualStyleBackColor = true;
+            btnNivel2.Click += button1_Click;
+            // 
+            // nudTasa
+            // 
+            nudTasa.DecimalPlaces = 2;
+            nudTasa.Location = new Point(489, 70);
+            nudTasa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            nudTasa.Name = "nudTasa";
+            nudTasa.Size = new Size(150, 27);
+            nudTasa.TabIndex = 24;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(489, 42);
+            label1.Name = "label1";
+            label1.Size = new Size(101, 20);
+            label1.TabIndex = 25;
+            label1.Text = "Tasa del dólar";
+            // 
+            // btnPesos
+            // 
+            btnPesos.Location = new Point(489, 103);
+            btnPesos.Name = "btnPesos";
+            btnPesos.Size = new Size(129, 29);
+            btnPesos.TabIndex = 27;
+            btnPesos.Text = "Total en RD$";
+            btnPesos.UseVisualStyleBackColor = true;
+            btnPesos.Click += btnPesos_Click;
+            // 
+            // nudPersonas
+            // 
+            nudPersonas.Location = new Point(489, 178);
+            nudPersonas.Maximum = new decimal(new int[] { 20, 0, 0, 0 });
+            nudPersonas.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudPersonas.Name = "nudPersonas";
+            nudPersonas.Size = new Size(150, 27);
+            nudPersonas.TabIndex = 28;
+            nudPersonas.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // btnPorPersona
+            // 
+            btnPorPersona.Location = new Point(489, 213);
+            btnPorPersona.Name = "btnPorPersona";
+            btnPorPersona.Size = new Size(197, 29);
+            btnPorPersona.TabIndex = 29;
+            btnPorPersona.Text = "Personas por personas";
+            btnPorPersona.UseVisualStyleBackColor = true;
+            btnPorPersona.Click += btnPorPersona_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(487, 148);
+            label2.Name = "label2";
+            label2.Size = new Size(66, 20);
+            label2.TabIndex = 30;
+            label2.Text = "Personas";
+            // 
+            // btnDeposito
+            // 
+            btnDeposito.Location = new Point(487, 248);
+            btnDeposito.Name = "btnDeposito";
+            btnDeposito.Size = new Size(94, 29);
+            btnDeposito.TabIndex = 31;
+            btnDeposito.Text = "Deposito";
+            btnDeposito.UseVisualStyleBackColor = true;
+            btnDeposito.Click += btnDeposito_Click;
+            // 
+            // chkFinSemana
+            // 
+            chkFinSemana.AutoSize = true;
+            chkFinSemana.Location = new Point(489, 293);
+            chkFinSemana.Name = "chkFinSemana";
+            chkFinSemana.Size = new Size(178, 24);
+            chkFinSemana.TabIndex = 32;
+            chkFinSemana.Text = "Fin de semana (+15%)";
+            chkFinSemana.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(0, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 33;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // btnFinSemana
+            // 
+            btnFinSemana.Location = new Point(489, 323);
+            btnFinSemana.Name = "btnFinSemana";
+            btnFinSemana.Size = new Size(94, 29);
+            btnFinSemana.TabIndex = 34;
+            btnFinSemana.Text = "FinSemana";
+            btnFinSemana.UseVisualStyleBackColor = true;
+            btnFinSemana.UseWaitCursor = true;
+            btnFinSemana.Click += btnFinSemana_Click;
+            // 
+            // btnDesglose
+            // 
+            btnDesglose.Location = new Point(489, 361);
+            btnDesglose.Name = "btnDesglose";
+            btnDesglose.Size = new Size(94, 29);
+            btnDesglose.TabIndex = 35;
+            btnDesglose.Text = "Desglose";
+            btnDesglose.UseVisualStyleBackColor = true;
+            btnDesglose.Click += btnDesglose_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(929, 684);
+            ClientSize = new Size(1252, 763);
+            Controls.Add(btnDesglose);
+            Controls.Add(btnFinSemana);
+            Controls.Add(button1);
+            Controls.Add(chkFinSemana);
+            Controls.Add(btnDeposito);
+            Controls.Add(label2);
+            Controls.Add(btnPorPersona);
+            Controls.Add(nudPersonas);
+            Controls.Add(btnPesos);
+            Controls.Add(label1);
+            Controls.Add(nudTasa);
+            Controls.Add(btnNivel2);
             Controls.Add(btnNivel1);
             Controls.Add(btnimperativo);
             Controls.Add(lstResultados);
@@ -325,10 +480,14 @@
             Load += frmInicio_Load;
             gpCotizador.ResumeLayout(false);
             gpCotizador.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudTarifa).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudNoches).EndInit();
             gbTotales.ResumeLayout(false);
             gbTotales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudTasa).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudPersonas).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -358,5 +517,18 @@
         private ListBox lstResultados;
         private Button btnimperativo;
         private Button btnNivel1;
+        private Button btnNivel2;
+        private NumericUpDown nudTarifa;
+        private NumericUpDown nudTasa;
+        private Label label1;
+        private Button btnPesos;
+        private NumericUpDown nudPersonas;
+        private Button btnPorPersona;
+        private Label label2;
+        private Button btnDeposito;
+        private CheckBox chkFinSemana;
+        private Button button1;
+        private Button btnFinSemana;
+        private Button btnDesglose;
     }
 }
