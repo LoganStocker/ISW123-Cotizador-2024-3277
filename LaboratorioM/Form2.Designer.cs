@@ -69,6 +69,8 @@
             btnExcursion = new Button();
             btnConsumoMinibar = new Button();
             btnCuentaTotal = new Button();
+            btnViejo = new Button();
+            btnFactura = new Button();
             gpCotizador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudTarifa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
@@ -480,11 +482,32 @@
             btnCuentaTotal.UseVisualStyleBackColor = true;
             btnCuentaTotal.Click += btnCuentaTotal_Click;
             // 
+            // btnViejo
+            // 
+            btnViejo.Location = new Point(487, 539);
+            btnViejo.Name = "btnViejo";
+            btnViejo.Size = new Size(94, 29);
+            btnViejo.TabIndex = 40;
+            btnViejo.Text = "Viejo";
+            btnViejo.UseVisualStyleBackColor = true;
+            btnViejo.Click += btnViejo_Click;
+            // 
+            // btnFactura
+            // 
+            btnFactura.Location = new Point(487, 574);
+            btnFactura.Name = "btnFactura";
+            btnFactura.Size = new Size(94, 29);
+            btnFactura.TabIndex = 41;
+            btnFactura.Text = "Factura";
+            btnFactura.UseVisualStyleBackColor = true;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1252, 763);
+            Controls.Add(btnFactura);
+            Controls.Add(btnViejo);
             Controls.Add(btnCuentaTotal);
             Controls.Add(btnConsumoMinibar);
             Controls.Add(btnExcursion);
@@ -570,5 +593,7 @@
         private Button btnExcursion;
         private Button btnConsumoMinibar;
         private Button btnCuentaTotal;
+        private Button btnViejo;
+        private Button btnFactura;
     }
 }
