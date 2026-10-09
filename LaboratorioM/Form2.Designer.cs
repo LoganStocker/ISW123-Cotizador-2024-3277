@@ -169,9 +169,9 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(129, 475);
+            btnLimpiar.Location = new Point(242, 475);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(94, 29);
+            btnLimpiar.Size = new Size(204, 29);
             btnLimpiar.TabIndex = 17;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
@@ -181,7 +181,7 @@
             // 
             btnCalcular.Location = new Point(29, 475);
             btnCalcular.Name = "btnCalcular";
-            btnCalcular.Size = new Size(94, 29);
+            btnCalcular.Size = new Size(207, 29);
             btnCalcular.TabIndex = 16;
             btnCalcular.Text = "Calcular";
             btnCalcular.UseVisualStyleBackColor = true;
@@ -318,7 +318,7 @@
             // 
             btnimperativo.Location = new Point(800, 492);
             btnimperativo.Name = "btnimperativo";
-            btnimperativo.Size = new Size(94, 29);
+            btnimperativo.Size = new Size(440, 29);
             btnimperativo.TabIndex = 21;
             btnimperativo.Text = "Imperativo";
             btnimperativo.UseVisualStyleBackColor = true;
@@ -328,7 +328,7 @@
             // 
             btnNivel1.Location = new Point(41, 583);
             btnNivel1.Name = "btnNivel1";
-            btnNivel1.Size = new Size(94, 29);
+            btnNivel1.Size = new Size(195, 29);
             btnNivel1.TabIndex = 22;
             btnNivel1.Text = "NIVEL1";
             btnNivel1.UseVisualStyleBackColor = true;
@@ -336,9 +336,9 @@
             // 
             // btnNivel2
             // 
-            btnNivel2.Location = new Point(141, 583);
+            btnNivel2.Location = new Point(242, 583);
             btnNivel2.Name = "btnNivel2";
-            btnNivel2.Size = new Size(94, 29);
+            btnNivel2.Size = new Size(204, 29);
             btnNivel2.TabIndex = 23;
             btnNivel2.Text = "NIVEL 2";
             btnNivel2.UseVisualStyleBackColor = true;
@@ -405,7 +405,7 @@
             // 
             btnDeposito.Location = new Point(487, 248);
             btnDeposito.Name = "btnDeposito";
-            btnDeposito.Size = new Size(94, 29);
+            btnDeposito.Size = new Size(199, 29);
             btnDeposito.TabIndex = 31;
             btnDeposito.Text = "Deposito";
             btnDeposito.UseVisualStyleBackColor = true;
@@ -425,7 +425,7 @@
             // 
             btnFinSemana.Location = new Point(489, 323);
             btnFinSemana.Name = "btnFinSemana";
-            btnFinSemana.Size = new Size(94, 29);
+            btnFinSemana.Size = new Size(197, 29);
             btnFinSemana.TabIndex = 34;
             btnFinSemana.Text = "FinSemana";
             btnFinSemana.UseVisualStyleBackColor = true;
@@ -436,7 +436,7 @@
             // 
             btnDesglose.Location = new Point(489, 361);
             btnDesglose.Name = "btnDesglose";
-            btnDesglose.Size = new Size(94, 29);
+            btnDesglose.Size = new Size(197, 29);
             btnDesglose.TabIndex = 35;
             btnDesglose.Text = "Desglose";
             btnDesglose.UseVisualStyleBackColor = true;
@@ -446,7 +446,7 @@
             // 
             btnTrasladoA.Location = new Point(487, 399);
             btnTrasladoA.Name = "btnTrasladoA";
-            btnTrasladoA.Size = new Size(168, 29);
+            btnTrasladoA.Size = new Size(199, 29);
             btnTrasladoA.TabIndex = 36;
             btnTrasladoA.Text = "TrasladoAeropuerto";
             btnTrasladoA.UseVisualStyleBackColor = true;
@@ -456,7 +456,7 @@
             // 
             btnExcursion.Location = new Point(487, 434);
             btnExcursion.Name = "btnExcursion";
-            btnExcursion.Size = new Size(94, 29);
+            btnExcursion.Size = new Size(199, 29);
             btnExcursion.TabIndex = 37;
             btnExcursion.Text = "Excursion";
             btnExcursion.UseVisualStyleBackColor = true;
@@ -466,7 +466,7 @@
             // 
             btnConsumoMinibar.Location = new Point(487, 469);
             btnConsumoMinibar.Name = "btnConsumoMinibar";
-            btnConsumoMinibar.Size = new Size(135, 29);
+            btnConsumoMinibar.Size = new Size(199, 29);
             btnConsumoMinibar.TabIndex = 38;
             btnConsumoMinibar.Text = "ConsumoMinibar";
             btnConsumoMinibar.UseVisualStyleBackColor = true;
@@ -476,7 +476,7 @@
             // 
             btnCuentaTotal.Location = new Point(487, 504);
             btnCuentaTotal.Name = "btnCuentaTotal";
-            btnCuentaTotal.Size = new Size(113, 29);
+            btnCuentaTotal.Size = new Size(199, 29);
             btnCuentaTotal.TabIndex = 39;
             btnCuentaTotal.Text = "CuentaTotal";
             btnCuentaTotal.UseVisualStyleBackColor = true;
@@ -486,7 +486,7 @@
             // 
             btnViejo.Location = new Point(487, 539);
             btnViejo.Name = "btnViejo";
-            btnViejo.Size = new Size(94, 29);
+            btnViejo.Size = new Size(199, 29);
             btnViejo.TabIndex = 40;
             btnViejo.Text = "Viejo";
             btnViejo.UseVisualStyleBackColor = true;
@@ -496,7 +496,7 @@
             // 
             btnFactura.Location = new Point(487, 574);
             btnFactura.Name = "btnFactura";
-            btnFactura.Size = new Size(94, 29);
+            btnFactura.Size = new Size(199, 29);
             btnFactura.TabIndex = 41;
             btnFactura.Text = "Factura";
             btnFactura.UseVisualStyleBackColor = true;
